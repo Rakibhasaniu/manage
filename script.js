@@ -25,5 +25,30 @@ const getLocalStorageData = () => {
     return parseProducts;
 }
 const setLocalStorage = (name, quantity) => {
-    console.log(name, quantity);
+    // console.log(name, quantity);
+    let products = getLocalStorageData();
+// console.log(products);
+    if(!products){
+        products = {};
+    }
+    // console.log(products);
+    // products.name = name;
+    // products.quantity = quantity;
+    products[name] = quantity;
+    // console.log(products);
+
+
+
+    localStorage.setItem("all-products", JSON.stringify(products));
+
 }
+const display = () => {
+    const products = getLocalStorageData();
+    // console.table(products);
+    const section = document.getElementById("all-products");
+
+    for(const product in products){
+        console.log(product);
+    }
+}
+display();
