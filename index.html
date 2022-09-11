@@ -11,7 +11,32 @@
 </head>
 <body>
     <h1 class="text-center">Manage Your Products</h1>
+    <div class="mx-auto w-50 row g-2 bg-warning p-4 mt-5">
+        <div class="col-md">
+           
+            <input type="email" class="form-control" name="" id="product-name" placeholder="product Name">
+           
+
+        </div>
+        <div class="col-md">
+            <input type="email" class="form-control" name="" id="product-quantity" placeholder="product Quantity">
+
+        </div>
+        <div class="col-md-12 mt-4">
+            <button onclick="addProduct()" class="btn btn-primary w-100">Add product</button>
+        </div>
+    </div>
+
+    <section id="all-products" class="row g-2 w-50 mx-auto">
+        <div class="shadow-sm p-3 mb-2 bg-body rounded">
+            <span class="fs-1">Laptop</span>
+            Quantity:<small class="fw-bold">
+                12
+            </small>
+        </div>
+    </section>
     <!-- JavaScript Bundle with Popper -->
+    <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
