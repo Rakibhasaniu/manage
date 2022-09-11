@@ -19,7 +19,11 @@ const addProduct = () => {
 //    console.log(productName, productQuantity);
 }
 
-
+const getLocalStorageData = () => {
+    const products = localStorage.getItem("all-products");
+    const parseProducts = JSON.parse(products);
+    return parseProducts;
+}
 const setLocalStorage = (name, quantity) => {
     console.log(name, quantity);
 }
